@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Ingresados</title>
+    <script>
+        function mostrarDato() {
+            let dato = localStorage.getItem("datoIngresado") || "No se ingresó ningún dato.";
+            document.getElementById("resultado").innerText = "Dato ingresado: " + dato;
+        }
+    </script>
+</head>
+<body onload="mostrarDato()">
+    <h2>Resultado</h2>
+    <p id="resultado"></p>
+</body>
+</html>

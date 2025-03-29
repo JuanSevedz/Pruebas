@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingresar Datos</title>
+    <script>
+        function guardarDato() {
+            let dato = document.getElementById("dato").value;
+            if (dato.trim() === "") {
+                alert("Por favor, ingrese un dato válido.");
+                return;
+            }
+            localStorage.setItem("datoIngresado", dato);
+            window.location.href = "Output.html"; // Redirige a la salida
+        }
+    </script>
+</head>
+<body>
+    <h2>Ingrese un dato:</h2>
+    <input type="text" id="dato">
+    <button onclick="guardarDato()">Enviar</button>
+</body>
+</html>
